@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+//int main()
+//{
+//	 int a = 0;
+//	int& b = a;
+//	const double& c = b;
+//	const int i= 1;
+//	int j = i;
+//
+//	return 0;
+//}
+void swap(int& a, int& b)
+{
+	int tmp = 0;
+	tmp = a;
+	a = b;
+	b = tmp;
+}
+
+int main()
+{
+	int a = 2;
+	int b = 1;
+	swap(a, b);
+	cout << a  << endl;
+	cout << b << endl;
+	return 0;
+}
