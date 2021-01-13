@@ -17,12 +17,25 @@ void swap(int& a, int& b)
 	a = b;
 	b = tmp;
 }
-
+int count1()
+{
+	static int n = 0;
+	n++;
+		return n;
+}
+int& count2()
+{
+	static int n = 0;
+	n++;
+	return n;
+}
 int main()
 {
 	int a = 2;
 	int b = 1;
 	swap(a, b);
+	count1();
+	count2();
 	cout << a  << endl;
 	cout << b << endl;
 	return 0;
