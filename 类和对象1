@@ -40,3 +40,18 @@ int main()
 	cout << b << endl;
 	return 0;
 }
+int main()
+{
+	int a = 0;
+	auto b = a;
+	int& c = a;
+
+	auto& d = a;
+	auto* e = &a;
+	cout << typeid(a).name() << endl;
+	cout << typeid(b).name() << endl;
+	cout << typeid(d).name() << endl;
+	cout << typeid(e).name() << endl;
+
+	return 0;
+}
