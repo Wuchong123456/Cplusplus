@@ -18,6 +18,7 @@ private:
 	int _month;
 	int _day;
 	static int a;
+	
 
 };
 
