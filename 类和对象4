@@ -2,6 +2,8 @@
 using namespace std;
 class Date
 {
+	friend ostream& operator<<(ostream& out, const Date& d);
+	friend istream& operator>>(istream& cin, Date& d);
 public:
 	Date(int year,int month,int day)
 		: _year(year)
@@ -13,21 +15,32 @@ public:
 	{
 		cout << _year << "-" << _month << "-" << _day << endl;
 	}
+	
 private:
 	int _year;
 	int _month;
 	int _day;
 	static int a;
-	
 
 };
 
+ostream& operator<<(ostream& out, const Date& d)
+{
+	out << d._year << "-" << d._month << "-" << d._day << endl;
+	return out;
+}
+istream& operator>>(istream& cin,  Date& d)
+{
+	cin >> d._year >> d._month >> d._day ;
+	return cin;
+}
 int main()
 {
 	Date d1(1,2,3);
 	Date d2 = {2,2,2};
 	Date d3 = d1;
 	d3.Print();
-	
+	cin >> d1;
+	cout << d1<< d2<<endl;
 	return 0;
 } 
