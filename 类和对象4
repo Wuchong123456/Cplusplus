@@ -42,5 +42,10 @@ int main()
 	d3.Print();
 	cin >> d1;
 	cout << d1<< d2<<endl;
+	int* p1 = (int*)malloc(sizeof(int));
+	free(p1);
+	int* p2 = new int[10];
+	delete[] p2;
+
 	return 0;
 } 
