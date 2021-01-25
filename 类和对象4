@@ -34,6 +34,13 @@ istream& operator>>(istream& cin,  Date& d)
 	cin >> d._year >> d._month >> d._day ;
 	return cin;
 }
+template<typename T>
+void Swap(T& x1, T& x2)
+{
+	T x = x1;
+	x1 = x2;
+	x2 = x;
+}
 int main()
 {
 	Date d1(1,2,3);
@@ -46,6 +53,14 @@ int main()
 	free(p1);
 	int* p2 = new int[10];
 	delete[] p2;
+	int i = 2;
+	int j = 3;
+	Swap(i, j);
+	cout << i << "\n" << j << endl;
+	double a = 1.5;
+	double b = 1.7;
+	Swap(a, b);
+	cout << a << "\n" << b << endl;
 
 	return 0;
 } 
