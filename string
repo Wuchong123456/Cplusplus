@@ -28,6 +28,8 @@ void test_strung1()
 		++it;
 	}
 	 it = s2.begin();
+	 
+	 
 	while (it != s2.end())
 	{
 		cout << *it << " ";
