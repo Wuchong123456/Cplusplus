@@ -39,6 +39,7 @@ void test_strung1()
 }
 int main()
 {
+
 	test_strung1();
 	return 0;
 }
