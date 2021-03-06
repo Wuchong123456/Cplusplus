@@ -1,0 +1,30 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int bitArray[32]={0};
+        for(auto e:nums)
+        {
+            //统计出所有数32个位1出现的次数
+            for(size_t i = 0;i<32;++i)
+            {
+                if(e & (1<<i))
+                {
+                    bitArray[i]++;
+                }
+            }
+        }
+        int num =0;
+        for(size_t i=0;i<32;++i)
+        {
+            //次数为3N+1的位就是只出现一次的数为1的位
+            if(bitArray[i]%3 ==1)
+            {
+                num|=(1<<i);
+            }
+        }
+        return num;
+        
+
+
+    }
+};
